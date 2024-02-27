@@ -1,0 +1,48 @@
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+}
+
+.home__logo{
+    display: flex;
+    margin-top: 20px;
+}
+.home__logo img{
+    width: 100px;
+    background-color: 
+    #E60000;
+    border-radius: 100%;
+}
+.home__logo h1 {
+    color: #E60000;
+    margin-left: 20px;
+}
+.home__user__title{
+    margin: 50px;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.home__user .home__user__link{
+    margin-right: 20px;
+}
+.home__user__link{
+    text-decoration: none;
+  font-size: 38px;
+  color: white;
+  padding: 25px;
+  background-color:#E60000;
+  border-radius: 25px;
+  width: 150px;
+  text-align: center;
+  margin: 10px;
+  transition: 0.5s;
+}
+.home__user__link:hover {
+    color: black;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  }
