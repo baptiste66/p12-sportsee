@@ -33,3 +33,7 @@
   width: 200px;
   margin-bottom: 80px;
 }
+.navBar__sport__cat:hover{
+  background-color: #fabbcdfe;
+cursor: pointer;
+}
