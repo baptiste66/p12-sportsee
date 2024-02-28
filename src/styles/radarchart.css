@@ -1,0 +1,17 @@
+
+
+.radarChart {
+    width: 282px;
+    height: 282px;
+    background-color: #282D30;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  @media (max-width: 1095px) {
+    .radarChart {
+      margin-bottom: 50px;
+    }
+  }
+  

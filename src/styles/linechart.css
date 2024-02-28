@@ -1,0 +1,67 @@
+
+.lineChart {
+    width: 283px;
+    height: 283px;
+    background-color: #FF0000;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 20px;
+  }
+  .radarCustom-tooltip{
+    background-color: white;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+  }
+  @media (max-width: 1095px) {
+    .lineChart {
+      margin-bottom: 50px;
+    }
+  }
+  .lineChart__label__time {
+    background-color: #FFFFFF;
+    padding: 10px;
+  }
+  .lineChart__title {
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-size: 20px;
+    width: 180px;
+    margin-left: 35px;
+    margin-top: 35px;
+  }
+  .lineChart__opacity {
+    position: absolute;
+    height: 100%;
+    width: 85px;
+    opacity: 0.1;
+    z-index: 0;
+    background-color: #000000;
+    right: 0;
+  }
+  .lineChart__chart {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .lineChart__activeDot {
+    width: 5px;
+    height: 5px;
+    background-color: blue;
+    border-radius: 100%;
+  }
+  .lineChart__activeDot__circle {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 100%;
+    opacity: 0.5;
+  }
