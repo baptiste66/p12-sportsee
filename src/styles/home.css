@@ -32,12 +32,12 @@
 }
 .home__user__link{
     text-decoration: none;
-  font-size: 38px;
+  font-size: 18px;
   color: white;
-  padding: 25px;
+  padding: 15px;
   background-color:#E60000;
   border-radius: 25px;
-  width: 150px;
+  width: 100px;
   text-align: center;
   margin: 10px;
   transition: 0.5s;

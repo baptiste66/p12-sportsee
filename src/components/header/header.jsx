@@ -6,7 +6,7 @@ export default function Header(props) {
     return (
         <div className='header'>
             <div className='header__logo'>
-                <Link to={`/user/${props.props}`}>
+                <Link to={`/`}>
                     <div className='header__logo__img'>
                         <img
                             src={Logo}
