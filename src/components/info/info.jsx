@@ -23,7 +23,9 @@ export async function fetchUserData(userId) {
 
 
 function Data(users, index) {
+    const day = ["L", "M", "M", "J", "V", "S", "D"]
     let user = []
+    let kind = []
     let dataMock = false
     if (index === 0) {
         user = [
@@ -42,9 +44,23 @@ function Data(users, index) {
                     carbohydrate: users[0][index].keyData.carbohydrateCount,
                     lipid: users[0][index].keyData.lipidCount
                 },
+                activity: users[1][index].sessions,
+                timesSessions: users[2][index].sessions,
+                performance: users[3][index].data
             }
         ];
+        let i = 0
+        day.forEach(el => {
+            user[0].timesSessions[i].day = el
+            i++
+        })
 
+        kind = users[3][index].kind;
+        let x = 1
+        user[0].performance.forEach(el => {
+            el.kind = kind[x]
+            x++
+        })
         dataMock = true
     } else {
         user = [
@@ -63,13 +79,28 @@ function Data(users, index) {
                     carbohydrate: users[0].data.keyData.carbohydrateCount,
                     lipid: users[0].data.keyData.lipidCount
                 },
+                activity: users[1].data.sessions,
+                timesSessions: users[2].data.sessions,
+                performance: users[3].data.data
             }
         ];
+        let i = 0
+        day.forEach(el => {
+            user[0].timesSessions[i].day = el
+            i++
+        })
+
+        kind = users[3].data.kind;
+        let x = 1
+        user[0].performance.forEach(el => {
+            el.kind = kind[x]
+            x++
+        })
         dataMock = false
     }
 
 
 
 
-    return { user, dataMock };
+    return { user, kind, dataMock };
 }

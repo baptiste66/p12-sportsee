@@ -17,12 +17,31 @@
 
   .main__page__welcome {
     width: 50%;
-    margin-top: -700px;
+    margin-top: 0px;
+    margin-right: auto;
   }
 
   .main__info{
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-top: 200px;
+    
+  }
+  .align{
+    display: flex;
+   
+  }
+  .align-chart{
+    display: flex;
+  }
+  @media (max-width: 1600px) {
+    .align-chart{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+  }
+  .main__page__charts{
+    margin-right: 100px;
   }

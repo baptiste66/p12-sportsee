@@ -5,13 +5,18 @@
     gap: 80px;
     margin-bottom: 50px;
     padding: 20px;
+    margin-left: 20px;
 }
 .main__nutrition__item img{
     width: 20px;
     height: 20px;
     justify-content: center;
-    
-    
+}
+@media (max-width: 1250px) {
+  .main__nutrition__item{
+    padding: 10;
+    margin-left: 10px;
+  }
 }
 .Calories{
     background: #FD51811A;

@@ -1,0 +1,36 @@
+
+.pieChart {
+    width: 282px;
+    height: 282px;
+    background-color: #FBFBFB;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 20px;
+  }
+  .align{
+    display: flex;
+  }
+  @media (max-width: 1095px) {
+    .pieChart {
+      margin-bottom: 50px;
+    }
+  }
+  .pieChart__text {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    text-align: center;
+    width: 100px;
+    color: #74798C;
+  }
+  .pieChart__text__big {
+    font-size: 26px;
+    color: #282D30;
+  }
+  .pieChart__title {
+    position: absolute;
+    top: 15x;
+    left: 25px;
+  }

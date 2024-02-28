@@ -6,7 +6,11 @@ import chicken from '../assets/chicken.png';
 import apple from '../assets/apple.png';
 import burger from '../assets/cheeseburger.png';
 import NutritionItem from '../components/nutrition/nutrition_item';
-import Navbar from '../components/navbar/navbar'
+import Navbar from '../components/navbar/navbar';
+import LineChart from '../components/linechart/linechart';
+import Barchart from '../components/barchart/barchart';
+import RadarChart from '../components/radarchart/radarchart';
+import PieChart from '../components/piechart/piechart';
 
 export default function Main(props) {
 
@@ -29,6 +33,16 @@ export default function Main(props) {
                             <h2 className="main__page__welcome__title">Bonjour <span className="main__page__welcome__title--name">{user.firstName}</span></h2>
                             <p className="main__page__welcome__msg">Félicitation ! Vous avez explosé vos objectif hier 👏</p>
                         </div>
+                        <div className='align'>
+                        <div className='main__page__charts'>
+                                
+                        <Barchart activity={user.activity} />
+                        <div className='align-chart'>
+                        <LineChart timesSessions={user.timesSessions} />
+                        <RadarChart performance={user.performance} />
+                        <PieChart todayScore={user.todayScore} />
+                                </div>
+                            </div>
                         <div className='main__info'>
                             <div className='main__info__data'>
                                 <NutritionItem  figureSrc={flame} altText="logo Calories" value={`${user.keyData.kCal.toLocaleString('en-US')}kCal`} type="Calories" />
@@ -36,6 +50,7 @@ export default function Main(props) {
                                 <NutritionItem figureSrc={apple} altText="logo Glucides" value={`${user.keyData.carbohydrate}g`} type="Glucides" />
                                 <NutritionItem figureSrc={burger} altText="logo Lipides" value={`${user.keyData.lipid}g`} type="Lipides" />
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
