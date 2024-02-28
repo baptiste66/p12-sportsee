@@ -1,0 +1,33 @@
+
+.header {
+    background-color: #020203;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    font-size: 22px;
+    font-family: "Roboto";
+    font-weight: 500;
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+  }
+  .header__logo__img {
+    background-color: #E60000;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+  }
+  .header__logo__name {
+    margin-left: 25px;
+    color: #E60000;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+  }
+  .header__nav {
+    color: #FFFFFF;
+  }

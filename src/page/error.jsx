@@ -1,3 +1,5 @@
+import '../styles/error.css'
+
 export default function Error({ buttonMock }) {
 
     return (

@@ -1,0 +1,44 @@
+.main__nutrition__item{
+    display: flex;
+    align-items: center;
+    background-color: #FBFBFB;
+    gap: 80px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.main__nutrition__item img{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    
+    
+}
+.Calories{
+    background: #FD51811A;
+    padding: 30px;
+    border-radius: 5%;
+  }
+  .Protéines{
+    padding: 30px;
+    background: #4AB8FF1A;
+    border-radius: 5%;
+  }
+  .Lipides{
+    padding: 30px;
+    background-color: rgba(253, 81, 129, 0.07);
+    border-radius: 5%;
+  }
+  .Glucides{
+    padding: 30px;
+    background-color: rgba(249, 206, 35, 0.07);
+    border-radius: 5%;
+  }
+  .main__nutrition__item__box__value{
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .main__nutrition__item__box__type{
+    margin-top: 5px;
+  }

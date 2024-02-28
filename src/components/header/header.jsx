@@ -1,5 +1,6 @@
 import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import '../../styles/header.css'
 
 export default function Header(props) {
     return (
@@ -13,7 +14,7 @@ export default function Header(props) {
                         />
                     </div>
                 </Link>
-                <p className='header__logo__name'>SportSee</p>
+                <h1 className='header__logo__name'>SportSee</h1>
 
             </div>
             <ul className='header__nav'>

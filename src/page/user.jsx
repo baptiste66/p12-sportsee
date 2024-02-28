@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import Error from './error';
+import '../styles/user.css'
 import flame from '../assets/flame.png';
 import chicken from '../assets/chicken.png';
 import apple from '../assets/apple.png';
 import burger from '../assets/cheeseburger.png';
 import NutritionItem from '../components/nutrition/nutrition_item';
+import Navbar from '../components/navbar/navbar'
 
 export default function Main(props) {
 
@@ -19,15 +21,17 @@ export default function Main(props) {
             const user = props.userData.user[0];
             return (
                 <div className="main">
-                    <div className='main__navBar'></div>
+                    <div className='main__navBar'>
+                        <Navbar />
+                    </div>
                     <div className='main__page'>
                         <div className='main__page__welcome'>
-                            <h2 className="main__page__welcome__title">Bonjour <span className="main__page__welcome__title__red">{user.firstName}</span></h2>
+                            <h2 className="main__page__welcome__title">Bonjour <span className="main__page__welcome__title--name">{user.firstName}</span></h2>
                             <p className="main__page__welcome__msg">Félicitation ! Vous avez explosé vos objectif hier 👏</p>
                         </div>
-                        <div className='NextToMain'>
-                            <div className='main__info'>
-                                <NutritionItem figureSrc={flame} altText="logo Calories" value={`${user.keyData.kCal.toLocaleString('en-US')}kCal`} type="Calories" />
+                        <div className='main__info'>
+                            <div className='main__info__data'>
+                                <NutritionItem  figureSrc={flame} altText="logo Calories" value={`${user.keyData.kCal.toLocaleString('en-US')}kCal`} type="Calories" />
                                 <NutritionItem figureSrc={chicken} altText="logo Protéines" value={`${user.keyData.protein}g`} type="Protéines" />
                                 <NutritionItem figureSrc={apple} altText="logo Glucides" value={`${user.keyData.carbohydrate}g`} type="Glucides" />
                                 <NutritionItem figureSrc={burger} altText="logo Lipides" value={`${user.keyData.lipid}g`} type="Lipides" />

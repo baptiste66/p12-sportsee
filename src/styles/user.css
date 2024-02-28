@@ -1,0 +1,28 @@
+.main__page__welcome h2{
+    font-family: "Roboto";
+    font-size: 38px;
+}
+.main__page__welcome__title--name{
+    color: #E60000;
+}
+.main__page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    width: 80%;
+  }
+
+  .main__page__welcome {
+    width: 70%;
+    margin-top: -700px;
+  }
+
+  .main__info{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 200px;
+  }
