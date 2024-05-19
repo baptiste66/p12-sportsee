@@ -1,7 +1,7 @@
 
 .lineChart {
-    width: 283px;
-    height: 283px;
+    width: 290px;
+    height: 280px;
     background-color: #FF0000;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     align-items: center;
    justify-content: center;
   }
-  @media (max-width: 1095px) {
+  @media (max-width: 1200px) {
     .lineChart {
       margin-bottom: 50px;
     }

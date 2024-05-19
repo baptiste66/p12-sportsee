@@ -9,10 +9,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     margin-bottom: 25px;
-    margin-left: 30px;
-    width: 80%;
+    margin-left: 60px;
+    
   }
 
   .main__page__welcome {
@@ -33,15 +32,24 @@
   }
   .align-chart{
     display: flex;
+    gap: 10px;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: 1500px) {
+    .align{
+      flex-direction: column;
+    }
     .align-chart{
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
+    .main__info{
+      margin-left: 0;
+      order: 1;
+    }
+    .main__page__charts{
+      order:2;
+    }
     
   }
-  .main__page__charts{
-    margin-right: 100px;
-  }
+  

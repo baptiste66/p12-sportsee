@@ -3,16 +3,16 @@
     align-items: center;
     background-color: #FBFBFB;
     gap: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     padding: 20px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 .main__nutrition__item img{
     width: 20px;
     height: 20px;
     justify-content: center;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
   .main__nutrition__item{
     padding: 10;
     margin-left: 10px;

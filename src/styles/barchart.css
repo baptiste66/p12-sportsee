@@ -1,7 +1,7 @@
 .barChart {
     background-color: #FBFBFB;
     padding: 25px;
-    width: 100%;
+    width: 880px;
     height: 300px;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -42,5 +42,11 @@
   }
   .barChart__info__color--kg {
     background-color: #282D30;
+  }
+  @media (max-width: 1200px) {
+    .barChart{
+      width: 500px;
+    }
+    
   }
   
