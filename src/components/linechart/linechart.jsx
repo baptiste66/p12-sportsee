@@ -2,17 +2,7 @@ import { XAxis, YAxis, Tooltip, LineChart, Line } from 'recharts'
 import'../../styles/linechart.css'
 export default function lineChart(props) {
     const data = props.timesSessions
-    const extendedData = [
-        {
-            day: 0,
-            sessionLength: data[0].sessionLength
-        },
-        ...data,
-        {
-            day: 8,
-            sessionLength: data[6].sessionLength
-        },
-    ];
+ 
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (
@@ -28,7 +18,7 @@ export default function lineChart(props) {
         <div className='lineChart'>
             <h3 className='lineChart__title'>Durée moyenne des sessions</h3>
             <div className='lineChart__chart'>
-                <LineChart width={300} height={175} data={extendedData} >
+                <LineChart width={300} height={175} data={data} >
                     <XAxis dataKey="day"
                         axisLine={false}
                         tickLine={false}
