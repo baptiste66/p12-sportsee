@@ -19,13 +19,13 @@ function User() {
       }
     };
     fetchData();
-  }, [id]);
+  }, [id]);//dépendance id si change actualise 
 
-  const navId = id === '18' ? '12' : '18';
+  
 
   return (
     <>
-      <Header props={navId} />
+      <Header  />
       <UserPage userData={userData} />
     </>
   );
