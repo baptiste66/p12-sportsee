@@ -11,17 +11,16 @@ import LineChart from '../components/linechart/linechart';
 import Barchart from '../components/barchart/barchart';
 import RadarChart from '../components/radarchart/radarchart';
 import PieChart from '../components/piechart/piechart';
-
 export default function Main(props) {
-
     const [dataMock, setDataMock] = useState(false);
+  
 
     const buttonMock = () => {
         setDataMock(true);
     }
 
-    if (props.userData !== null) {
-        if (!props.userData.dataMock || dataMock) {
+    if (props.userData !== null ) {
+        if ((!props.userData.dataMock || dataMock) ) { 
             const user = props.userData.user[0];
             return (
                 <div className="main">
@@ -34,34 +33,33 @@ export default function Main(props) {
                             <p className="main__page__welcome__msg">Félicitation ! Vous avez explosé vos objectif hier 👏</p>
                         </div>
                         <div className='align'>
-                        <div className='main__page__charts'>
-                                
-                        <Barchart activity={user.activity} />
-                        <div className='align-chart'>
-                        <LineChart timesSessions={user.timesSessions} />
-                        <RadarChart performance={user.performance} />
-                        <PieChart todayScore={user.todayScore} />
+                            <div className='main__page__charts'>
+                                <Barchart activity={user.activity} />
+                                <div className='align-chart'>
+                                    <LineChart timesSessions={user.timesSessions} />
+                                    <RadarChart performance={user.performance} />
+                                    <PieChart todayScore={user.todayScore} />
                                 </div>
                             </div>
-                        <div className='main__info'>
-                            <div className='main__info__data'>
-                                <NutritionItem  figureSrc={flame} altText="logo Calories" value={`${user.keyData.kCal.toLocaleString('en-US')}kCal`} type="Calories" />
-                                <NutritionItem figureSrc={chicken} altText="logo Protéines" value={`${user.keyData.protein}g`} type="Protéines" />
-                                <NutritionItem figureSrc={apple} altText="logo Glucides" value={`${user.keyData.carbohydrate}g`} type="Glucides" />
-                                <NutritionItem figureSrc={burger} altText="logo Lipides" value={`${user.keyData.lipid}g`} type="Lipides" />
+                            <div className='main__info'>
+                                <div className='main__info__data'>
+                                    <NutritionItem  figureSrc={flame} altText="logo Calories" value={`${user.keyData.kCal.toLocaleString('en-US')}kCal`} type="Calories" />
+                                    <NutritionItem figureSrc={chicken} altText="logo Protéines" value={`${user.keyData.protein}g`} type="Protéines" />
+                                    <NutritionItem figureSrc={apple} altText="logo Glucides" value={`${user.keyData.carbohydrate}g`} type="Glucides" />
+                                    <NutritionItem figureSrc={burger} altText="logo Lipides" value={`${user.keyData.lipid}g`} type="Lipides" />
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
-            )
+            );
         } else {
             return (
                 <div className="main">
                     <div className='main__navBar'></div>
                     <Error buttonMock={buttonMock} />
                 </div>
-            )
+            );
         }
     }
 }

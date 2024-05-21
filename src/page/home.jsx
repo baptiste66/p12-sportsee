@@ -17,7 +17,6 @@ function HomePage() {
         <h2 className='home__user__title'>Sélectionne un utilisateur</h2>
         <Link className='home__user__link' to={"/user/18"}>Utilisateur 18 : Cecilia</Link>
         <Link className='home__user__link' to={"/user/12"}>Utilisateur 12 : Karl</Link>
-        <Link className='home__user__link' to={"/user/test"}>Utilisateur de test : Thomas</Link>
       </div>
     </div>
   );

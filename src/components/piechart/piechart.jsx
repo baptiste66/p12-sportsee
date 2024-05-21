@@ -27,7 +27,7 @@ export default function PieChart(props) {
             const arc = d3.arc()
             .innerRadius(80) // up
             .outerRadius(90) //  down
-            .cornerRadius(50); // side
+    
 
         //position
         const svg = d3.select(chartRef.current)

@@ -8,18 +8,19 @@ import { fetchUserData } from '../info/info';
 function User() {
   const { id } = useParams();
   const [userData, setUserData] = useState(null);
+  const devMode = false;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchUserData(id);
+        const data = await fetchUserData(id, devMode);
         setUserData(data);
       } catch (error) {
         console.error(error);
       }
     };
     fetchData();
-  }, [id]);//dépendance id si change actualise 
+  }, [id, devMode]);
 
   
 

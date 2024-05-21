@@ -1,7 +1,15 @@
 import axios from "axios";
 import { USER_ACTIVITY__MOCK, USER_AVERAGE_SESSIONS__MOCK, USER_PERFORMANCE__MOCK, USER_MAIN_DATA__MOCK } from "../../data/data";
 
-export async function fetchUserData(userId) {
+
+
+
+export async function fetchUserData(userId, devMode) {
+    if (devMode) {
+        const finalUserData = [USER_MAIN_DATA__MOCK, USER_ACTIVITY__MOCK, USER_AVERAGE_SESSIONS__MOCK, USER_PERFORMANCE__MOCK];
+        return Data(finalUserData, 0, true);
+    }
+
     const paths = [
         `http://localhost:3000/user/${userId}`,
         `http://localhost:3000/user/${userId}/activity`,
@@ -14,19 +22,18 @@ export async function fetchUserData(userId) {
         const validUserData = userData.filter(data => data !== null);
         const index = validUserData.length === 0 ? 0 : '';
         const finalUserData = validUserData.length === 0 ? [USER_MAIN_DATA__MOCK, USER_ACTIVITY__MOCK, USER_AVERAGE_SESSIONS__MOCK, USER_PERFORMANCE__MOCK] : validUserData;
-        return Data(finalUserData, index);
+        return Data(finalUserData, index, false);
     } catch (error) {
         console.error(error);
         return null;
     }
 }
 
-
-function Data(users, index) {
+function Data(users, index, dataMock) {
     const day = ["L", "M", "M", "J", "V", "S", "D"]
-    let user = []
-    let kind = []
-    let dataMock = false
+    let user = [];
+    let kind = [];
+
     if (index === 0) {
         user = [
             {
@@ -49,19 +56,19 @@ function Data(users, index) {
                 performance: users[3][index].data
             }
         ];
-        let i = 0
+
+        let i = 0;
         day.forEach(el => {
-            user[0].timesSessions[i].day = el
-            i++
-        })
+            user[0].timesSessions[i].day = el;
+            i++;
+        });
 
         kind = users[3][index].kind;
-        let x = 1
+        let x = 1;
         user[0].performance.forEach(el => {
-            el.kind = kind[x]
-            x++
-        })
-        dataMock = true
+            el.kind = kind[x];
+            x++;
+        });
     } else {
         user = [
             {
@@ -84,23 +91,20 @@ function Data(users, index) {
                 performance: users[3].data.data
             }
         ];
-        let i = 0
+
+        let i = 0;
         day.forEach(el => {
-            user[0].timesSessions[i].day = el
-            i++
-        })
+            user[0].timesSessions[i].day = el;
+            i++;
+        });
 
         kind = users[3].data.kind;
-        let x = 1
+        let x = 1;
         user[0].performance.forEach(el => {
-            el.kind = kind[x]
-            x++
-        })
-        dataMock = false
+            el.kind = kind[x];
+            x++;
+        });
     }
-
-
-
 
     return { user, kind, dataMock };
 }
